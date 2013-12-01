@@ -1,0 +1,3 @@
+#!/bin/sh
+nyancat 2>/dev/null &
+mplayer -loop 0 media/nyan.ogg &>/dev/null
