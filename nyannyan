@@ -1,3 +1,5 @@
 #!/bin/sh
-nyancat 2>/dev/null &
+CWD=`pwd`
+[ ! -e $CWD/nyancat/src/nyancat ] && ( cd ./nyancat; make; cd $CWD)
+$CWD/nyancat/src/nyancat 2>/dev/null &
 mplayer -loop 0 media/nyan.ogg &>/dev/null
