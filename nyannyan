@@ -2,4 +2,5 @@
 CWD=`pwd`
 [ ! -e $CWD/nyancat/src/nyancat ] && ( cd ./nyancat; make; cd $CWD)
 $CWD/nyancat/src/nyancat 2>/dev/null &
-mplayer -loop 0 media/nyan.ogg &>/dev/null
+mplayer -loop 0 media/nyan.ogg 1>/dev/null 2>&1
+kill %1
